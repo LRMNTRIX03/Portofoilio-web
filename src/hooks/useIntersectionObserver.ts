@@ -8,38 +8,29 @@ interface UseIntersectionObserverProps {
 
 export const useIntersectionObserver = ({
   threshold = 0.1,
-  rootMargin = '0px',
-  freezeOnceVisible = false,
+  rootMargin = '0px 0px -15% 0px',
+  freezeOnceVisible = true,
 }: UseIntersectionObserverProps = {}) => {
   const [isIntersecting, setIsIntersecting] = useState(false);
-  const [hasIntersected, setHasIntersected] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const element = elementRef.current;
-    if (!element) return;
+    const el = elementRef.current;
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        const isElementIntersecting = entry.isIntersecting;
-        
-        if (isElementIntersecting && !hasIntersected) {
-          setHasIntersected(true);
-        }
-
-        if (!freezeOnceVisible || !hasIntersected) {
-          setIsIntersecting(isElementIntersecting);
+        if (entry.isIntersecting) {
+          setIsIntersecting(true);
+          if (freezeOnceVisible) observer.unobserve(el);
         }
       },
       { threshold, rootMargin }
     );
 
-    observer.observe(element);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [threshold, rootMargin, freezeOnceVisible]);
 
-    return () => {
-      observer.disconnect();
-    };
-  }, [threshold, rootMargin, freezeOnceVisible, hasIntersected]);
-
-  return { elementRef, isIntersecting, hasIntersected };
+  return { elementRef, isIntersecting };
 };

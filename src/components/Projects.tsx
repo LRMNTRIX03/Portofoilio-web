@@ -213,6 +213,10 @@ const Projects: React.FC = () => {
             ))}
           </div>
 
+          <div className='flex items-center justify-center w-full'>
+              <p className='text-2xl font-semibold'>Still Explore More!</p>
+          </div>
+
         
           <div 
             className={`text-center mt-16 transition-all duration-1000 delay-700 ${
