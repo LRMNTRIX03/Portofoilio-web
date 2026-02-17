@@ -4,7 +4,7 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
 const Experience: React.FC = () => {
   const { elementRef, isIntersecting } = useIntersectionObserver({ 
-    threshold: 0.2,
+    threshold: 0.1,
     freezeOnceVisible: true 
   });
 
