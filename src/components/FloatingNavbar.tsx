@@ -16,7 +16,7 @@ const FloatingNavbar: React.FC = () => {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.1 }
     );
 
     sections.forEach((section) => {

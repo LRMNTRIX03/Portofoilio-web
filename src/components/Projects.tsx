@@ -214,7 +214,7 @@ const Projects: React.FC = () => {
           </div>
 
           <div className='flex items-center justify-center w-full'>
-              <p className='text-2xl font-semibold'>Still Explore More!</p>
+              <p className='text-2xl font-semibold mt-2'>Still Explore More!</p>
           </div>
 
         
