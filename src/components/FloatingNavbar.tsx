@@ -51,35 +51,39 @@ const FloatingNavbar: React.FC = () => {
   ];
 
   return (
-    <nav
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'translate-y-0 opacity-100' 
-          : 'translate-y-[-100px] opacity-0'
-      }`}
-    >
-      <div className="bg-zinc-900/80 backdrop-blur-xl border border-zinc-800/50 rounded-full px-6 py-3 shadow-2xl shadow-emerald-500/5">
-        <ul className="flex items-center gap-1">
-          {navItems.map((item) => (
-            <li key={item.id}>
-              <button
-                onClick={() => scrollToSection(item.id)}
-                className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full ${
-                  activeSection === item.id
-                    ? 'text-emerald-400'
-                    : 'text-zinc-400 hover:text-zinc-200'
-                }`}
-              >
-                {activeSection === item.id && (
-                  <span className="absolute inset-0 bg-emerald-500/10 rounded-full border border-emerald-500/20" />
-                )}
-                <span className="relative z-10">{item.label}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+   <nav
+  className={`fixed top-6 left-0 right-0 z-50 transition-all duration-500 px-3 ${
+    isScrolled 
+      ? 'translate-y-0 opacity-100' 
+      : 'translate-y-[-100px] opacity-0'
+  }`}
+>
+  <div className="overflow-x-auto touch-pan-x">
+    <div className="mx-auto w-max bg-zinc-900/80 backdrop-blur-xl border border-zinc-800/50 rounded-full px-3 py-2 shadow-2xl shadow-emerald-500/5">
+      
+      <ul className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
+        {navItems.map((item) => (
+          <li key={item.id} className="flex-shrink-0">
+            <button
+              onClick={() => scrollToSection(item.id)}
+              className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full ${
+                activeSection === item.id
+                  ? 'text-emerald-400'
+                  : 'text-zinc-400 hover:text-zinc-200'
+              }`}
+            >
+              {activeSection === item.id && (
+                <span className="absolute inset-0 bg-emerald-500/10 rounded-full border border-emerald-500/20" />
+              )}
+              <span className="relative z-10">{item.label}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
+
+    </div>
+  </div>
+</nav>
   );
 };
 
