@@ -70,25 +70,30 @@ const About: React.FC = () => {
                   : 'opacity-0 -translate-x-10'
               }`}
             >
-              <p className="text-lg text-zinc-400 leading-relaxed">
-                Saya adalah seorang Full Stack Developer yang memiliki pengalaman sekitar{' '}
-                <span className="text-emerald-400 font-semibold">2–3 tahun</span> dalam membangun 
-                aplikasi web. Saya berfokus pada pembuatan tampilan yang nyaman digunakan serta 
-                sistem backend yang kuat dan andal.
-              </p>
+              <p className="text-lg text-zinc-400 leading-relaxed text-justify">
+              Saya adalah seorang Full Stack Developer yang memiliki pengalaman sekitar{' '}
+              <span className="text-emerald-400 font-semibold">2–3 tahun</span> dalam membangun 
+              aplikasi web. Saya berfokus pada pembuatan tampilan yang nyaman digunakan serta 
+              sistem backend yang kuat dan andal.
+            </p>
 
-              <p className="text-lg text-zinc-400 leading-relaxed">
-                Perjalanan saya di dunia teknologi dimulai dari rasa ingin tahu tentang cara kerja website. 
-                Saat ini, saya membantu individu maupun bisnis dalam mewujudkan ide digital mereka melalui 
-                teknologi modern dan praktik pengembangan yang baik.
-              </p>
+            <p className="text-lg text-zinc-400 leading-relaxed text-justify">
+              Perjalanan saya di dunia teknologi dimulai dari rasa ingin tahu tentang cara kerja website. 
+              Saat ini, saya membantu individu maupun bisnis dalam mewujudkan ide digital mereka melalui 
+              teknologi modern dan praktik pengembangan yang baik.
+            </p>
 
-              <p className="text-lg text-zinc-400 leading-relaxed">
-                Selain mengembangkan aplikasi, saya juga membuka jasa pembuatan website profesional untuk 
-                kebutuhan personal, bisnis, dan UMKM, dengan komitmen memberikan solusi digital yang 
-                berkualitas, efektif, dan sesuai kebutuhan klien.
-              </p>
-              
+            <p className="text-lg text-zinc-400 leading-relaxed text-justify">
+              Selain mengembangkan aplikasi, saya juga membuka jasa pembuatan website profesional untuk 
+              kebutuhan personal, bisnis, dan UMKM, dengan komitmen memberikan solusi digital yang 
+              berkualitas, efektif, dan sesuai kebutuhan klien.
+            </p>
+
+            <p className="text-lg text-zinc-400 leading-relaxed text-justify">
+              Saya juga terus berkomitmen untuk belajar dan mengembangkan diri, mengikuti perkembangan 
+              teknologi terbaru, serta meningkatkan kemampuan teknis maupun problem solving agar dapat 
+              memberikan hasil terbaik di setiap proyek yang saya kerjakan.
+            </p>
             </div>
 
             
