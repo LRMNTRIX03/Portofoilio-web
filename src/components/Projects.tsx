@@ -9,7 +9,7 @@ import mawar from '../assets/img/projects/mawar.png';
 
 const Projects: React.FC = () => {
   const { elementRef, isIntersecting } = useIntersectionObserver({ 
-    threshold: 0.2,
+    threshold: 0.1,
     freezeOnceVisible: true 
   });
 
