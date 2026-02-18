@@ -5,6 +5,7 @@ import dashboard from '../assets/img/projects/dashboard.png';
 import api from '../assets/img/projects/api.png';
 import code from '../assets/img/projects/code.png';
 import layanan from '../assets/img/projects/layanan.png';
+import mawar from '../assets/img/projects/mawar.png';
 
 const Projects: React.FC = () => {
   const { elementRef, isIntersecting } = useIntersectionObserver({ 
@@ -28,7 +29,7 @@ const Projects: React.FC = () => {
      {
       title: 'Book Rest API with Laravel',
       category: 'Backend',
-      description: 'Proyek ini adalah RESTful API sederhana berbasis Laravel untuk mengelola data buku.API ini menyediakan fitur untuk menampilkan daftar buku, detail buku, menambahkan buku baru, memperbarui, serta menghapus buku.',
+      description: 'Proyek ini adalah RESTful API sederhana berbasis Laravel untuk mengelola data buku. API ini menyediakan fitur untuk menampilkan daftar buku, detail buku, menambahkan buku baru, memperbarui, serta menghapus buku.',
       image: api,
       technologies: ['PHP', 'Laravel', 'MySQL', 'Postman'],
       github: 'https://github.com/LRMNTRIX03/Simple-Library-Books-Laravel',
@@ -50,6 +51,16 @@ const Projects: React.FC = () => {
       category: 'Full Stack',
       description: 'Project ini merupakan implementasi chatbot layanan kampus berbasis intent classification yang dikembangkan untuk membantu menjawab pertanyaan seputar informasi akademik dan layanan mahasiswa di Universitas Budi Luhur. Project ini menggunakan metode Multinomial Naive Bayes dan KNN untuk klasifikasi intent, dengan ekstraksi fitur TF-IDF untuk meningkatkan akurasi dalam memahami pertanyaan pengguna yang dibuat dari awal tanpa library.',
       image: layanan,
+      technologies: ['Laravel', 'Blade', 'Bootstrap', 'Tailwind CSS', 'PHP', 'MySQL'],
+      github: 'https://github.com/LRMNTRIX03/Web-Sistem-Penunjang-Keputusan-Metode-SMART-Untuk-Menu-Makanan-Terbaik',
+      demo: '',
+      featured: true
+    },
+       {
+      title: 'Website Sistem Penunjang Keputusan Menu Makanan Terbaik dengan Metode SMART',
+      category: 'Full Stack',
+      description: 'Proyek ini merupakan aplikasi Sistem Pendukung Keputusan (SPK) untuk membantu menentukan menu makanan terbaik menggunakan metode SMART (Simple Multi Attribute Rating Technique). ',
+      image: mawar,
       technologies: ['React', 'Flask', 'MySQL', 'Tailwind', 'Sastrawi', 'Pandas', 'Numpy'],
       github: 'https://github.com/LRMNTRIX03/Chatbot-Layanan-Kampus-Budi-Luhur-Dengan-Metode-Multinomial-Naive-Bayes-dan-K-Nearest-Neighbors',
       demo: '',
