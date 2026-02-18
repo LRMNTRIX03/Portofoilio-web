@@ -2,7 +2,7 @@ import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react';
 import pp_keren from '../assets/img/pp_keren.jpeg';
-import cv from '../assets/cv/CV_Lutfi_Rizaldi_Mahida.pdf';
+import cv from '../assets/cv/CV_Lutfi_Rizaldi_Mahida - 1.pdf';
 
 const Hero: React.FC = () => {
   const { elementRef, isIntersecting } = useIntersectionObserver({ 
