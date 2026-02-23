@@ -72,7 +72,7 @@ const About: React.FC = () => {
             >
               <p className="text-lg text-zinc-400 leading-relaxed text-justify">
               Saya adalah seorang Full Stack Developer yang memiliki pengalaman sekitar{' '}
-              <span className="text-emerald-400 font-semibold">2–3 tahun</span> dalam membangun 
+              <span className="text-emerald-400 font-semibold">3 tahun</span> dalam membangun 
               aplikasi web. Saya berfokus pada pembuatan tampilan yang nyaman digunakan serta 
               sistem backend yang kuat dan andal.
             </p>

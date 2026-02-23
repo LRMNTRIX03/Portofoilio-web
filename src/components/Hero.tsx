@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
             </div>
 
             <p className="text-lg text-zinc-400 leading-relaxed max-w-xl text-justify">
-             Fresh Graduate Teknik Informatika dengan IPK 3,96 yang berminat sebagai Full-Stack Developer, menguasai Python, PHP, dan JavaScript, serta memiliki kemampuan komunikasi dan kerja tim yang baik.
+             FLulusan Teknik Informatika dengan IPK 3,96 yang berfokus pada pengembangan Backend dan Full-Stack Web. Memiliki pengalaman membangun aplikasi berbasis Laravel dan Django, termasuk sistem prediksi berbasis ANN serta sistem berbasis rule. Terbiasa mengembangkan REST API, sistem autentikasi, dan perancangan database relasional. Memiliki kemampuan analisis, problem solving, serta komunikasi dan kerja tim yang baik.
             </p>
 
             <div className="flex flex-wrap gap-4">
