@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
             </div>
 
             <p className="text-lg text-zinc-400 leading-relaxed max-w-xl text-justify">
-             FLulusan Teknik Informatika dengan IPK 3,96 yang berfokus pada pengembangan Backend dan Full-Stack Web. Memiliki pengalaman membangun aplikasi berbasis Laravel dan Django, termasuk sistem prediksi berbasis ANN serta sistem berbasis rule. Terbiasa mengembangkan REST API, sistem autentikasi, dan perancangan database relasional. Memiliki kemampuan analisis, problem solving, serta komunikasi dan kerja tim yang baik.
+             Lulusan Teknik Informatika dengan IPK 3,96 yang berfokus pada pengembangan Backend dan Full-Stack Web. Memiliki pengalaman membangun aplikasi berbasis Laravel dan Django, termasuk sistem prediksi berbasis ANN serta sistem berbasis rule. Terbiasa mengembangkan REST API, sistem autentikasi, dan perancangan database relasional. Memiliki kemampuan analisis, problem solving, serta komunikasi dan kerja tim yang baik.
             </p>
 
             <div className="flex flex-wrap gap-4">
