@@ -6,6 +6,7 @@ import api from '../assets/img/projects/api.png';
 import code from '../assets/img/projects/code.png';
 import layanan from '../assets/img/projects/layanan.png';
 import mawar from '../assets/img/projects/mawar.png';
+import bookshelf from '../assets/img/projects/bookshelf-api.png';
 
 const Projects: React.FC = () => {
   const { elementRef, isIntersecting } = useIntersectionObserver({ 
@@ -63,6 +64,17 @@ const Projects: React.FC = () => {
       image: mawar,
       technologies: ['React', 'Flask', 'MySQL', 'Tailwind', 'Sastrawi', 'Pandas', 'Numpy'],
       github: 'https://github.com/LRMNTRIX03/Chatbot-Layanan-Kampus-Budi-Luhur-Dengan-Metode-Multinomial-Naive-Bayes-dan-K-Nearest-Neighbors',
+      demo: '',
+      featured: true
+    },
+       {
+      title: 'Rest Api Bookshelf dengan Express',
+      category: 'Backend',
+      description: 'RESTful API untuk proses manajemen buku menggunakan Express.js dengan arsitektur modular (Service Layer Pattern). API ini memungkinkan pengguna untuk melakukan operasi CRUD (Create, Read, Update, Delete) terhadap data buku.',
+      image: bookshelf,
+      technologies: ['Node.js', 'Express', 'Postman', 'JavaScript'],
+      github: 'https://github.com/LRMNTRIX03/Backend-Bookshelf-Api',
+
       demo: '',
       featured: true
     }
@@ -158,7 +170,7 @@ const Projects: React.FC = () => {
 
                  
                   <div className="p-6">
-                    {/* Category */}
+               
                     <span className="inline-block px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-xs font-semibold mb-3">
                       {project.category}
                     </span>
