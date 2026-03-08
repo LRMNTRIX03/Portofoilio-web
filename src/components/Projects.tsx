@@ -7,6 +7,7 @@ import code from '../assets/img/projects/code.png';
 import layanan from '../assets/img/projects/layanan.png';
 import mawar from '../assets/img/projects/mawar.png';
 import bookshelf from '../assets/img/projects/bookshelf-api.png';
+import todolist from "../assets/img/projects/todolist.png";
 
 const Projects: React.FC = () => {
   const { elementRef, isIntersecting } = useIntersectionObserver({ 
@@ -77,6 +78,17 @@ const Projects: React.FC = () => {
       github: 'https://github.com/LRMNTRIX03/Backend-Bookshelf-Api',
 
       demo: '',
+      featured: true
+    },
+    {
+      title: 'To Do List App dengan React TS',
+      category: 'Frontend',
+      description: 'Aplikasi To Do List dengan React dan TypeScript yang dapat membantu mengatur tugas dan kegiatan sehari-hari.',
+      image: todolist,
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'lucide-react', 'vite', 'framer-motion'],
+      github: 'https://github.com/LRMNTRIX03/To-Do-List-App-',
+
+      demo: 'https://to-do-list-app-iota-blond.vercel.app/',
       featured: true
     }
   ];
