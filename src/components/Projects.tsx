@@ -16,6 +16,7 @@ const Projects: React.FC = () => {
 
   const [filter, setFilter] = useState('All');
 
+
   const projects = [
     {
       title: 'Analisis Sentimen Metode Logistic Regression Pada Aplikasi BCA Mobile',
