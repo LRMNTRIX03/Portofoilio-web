@@ -51,7 +51,7 @@ export const techCategories : TechCategory[] = [
     },
     {
       category: 'Database',
-      color: 'emerald',
+      color: 'blue',
       technologies: [
         { name: 'MySQL', icon: SiMysql },
         { name: 'PostgreSQL', icon: SiPostgresql },
