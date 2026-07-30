@@ -15,60 +15,87 @@
   }
   export const experiences : ExperienceData[] = [
     {
-      position: 'Part-time Teacher Coding and Robotics',
-      company: 'Codero Education',
-      location: 'Bintaro, Indonesia',
-      period: '2025 - Present',
-      type: 'Part-time',
-     description: 'Mengajar coding dan robotik kepada siswa tingkat SD, SMP, dan SMA dengan metode pembelajaran interaktif dan berbasis proyek.',
-      responsibilities: [
-        'Mengajar konsep dasar hingga menengah pemrograman kepada siswa SD, SMP, dan SMA',
-        'Mengenalkan computational thinking melalui pemrograman visual menggunakan Scratch dan PictoBlox',
-        'Membimbing siswa dalam pengembangan game dan simulasi menggunakan Roblox Studio',
-        'Mengajarkan dasar elektronika dan pemrograman mikrokontroler menggunakan Arduino',
-        'Melatih robotika menggunakan platform Ukit dan Astrobot, termasuk perakitan dan troubleshooting',
-        'Mengajarkan dasar web development menggunakan HTML, CSS, dan JavaScript',
-        'Mengajarkan dasar pemrograman Python untuk siswa SMP dan SMA',
-        'Membimbing siswa dalam pembuatan mini project berbasis coding dan robotik',
-        'Menyusun materi pembelajaran dan modul praktikum sesuai kurikulum internal',
-        'Mengembangkan kemampuan problem solving, logika berpikir, dan kreativitas siswa melalui project-based learning',
-      ],
-      technologies: ['Python', 'MySQL', 'Scratch', 'HTML/CSS', 'Arduino', 'Roblox Studio', 'PictoBlox']
-    },
-        {
-      position: 'Freelance Web Developer',
-      company: 'Self-Employed',
-      location: 'Remote',
-      period: '2024 - Sekarang',
-      type: 'Freelance',
-      description: 'Menyediakan jasa pembuatan website dan pengembangan sistem berbasis web untuk individu, UMKM, dan mahasiswa.',
-      responsibilities: [
-        'Mengerjakan pembuatan website sesuai kebutuhan klien, mulai dari company profile hingga sistem berbasis web',
-        'Membantu pengembangan dan penyempurnaan project mahasiswa, termasuk tugas akhir dan skripsi',
-        'Mengembangkan fitur backend dan frontend menggunakan framework modern',
-        'Melakukan integrasi database dan pengelolaan data menggunakan MySQL dan PostgreSQL',
-        'Melakukan testing, debugging, dan optimasi performa aplikasi',
-        'Memberikan dokumentasi serta panduan penggunaan sistem kepada klien',
-        'Menyesuaikan desain dan fitur website berdasarkan feedback pengguna',
-      ],
-      technologies: ['Laravel', 'Flask', 'Django', 'React', 'Express', 'MySQL', 'PostgreSQL', 'Docker', 'Git']
-    },
-    {
-  position: 'Web Developer (Studi Independen)',
+  position: 'Coding & Robotics Teacher (Part-time)',
+  company: 'Codero Education',
+  location: 'Bintaro, Indonesia',
+  period: 'December 2025 – Present',
+  type: 'Part-time',
+  description:
+    'Deliver interactive coding and robotics education to elementary, junior high, and senior high school students through project-based learning.',
+  responsibilities: [
+    'Delivered programming courses covering Python, HTML, CSS, JavaScript, Scratch, PictoBlox, and Roblox Studio.',
+    'Introduced computational thinking and programming fundamentals through visual programming platforms.',
+    'Taught robotics and embedded systems using Arduino, Ukit, and Astrobot, including hardware assembly and troubleshooting.',
+    'Guided students in developing coding and robotics projects while strengthening problem-solving and logical thinking skills.',
+    'Designed learning materials, practical exercises, and assessments aligned with the internal curriculum.',
+    'Mentored students throughout project development and presentation using project-based learning methodologies.'
+  ],
+  technologies: [
+    'Python',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'Scratch',
+    'PictoBlox',
+    'Arduino',
+    'Roblox Studio',
+    'Ukit',
+    'Astrobot'
+  ]
+},
+{
+  position: 'Freelance Full-Stack Web Developer',
+  company: 'Self-Employed',
+  location: 'Remote',
+  period: '2024 – Present',
+  type: 'Freelance',
+  description:
+    'Develop web applications and custom software solutions for individuals, small businesses, and academic projects.',
+  responsibilities: [
+    'Designed and developed responsive websites ranging from company profiles to custom web-based information systems.',
+    'Built full-stack applications using modern frameworks, including Laravel, Django, Flask, React, and Express.js.',
+    'Designed and integrated relational databases using MySQL and PostgreSQL.',
+    'Performed application testing, debugging, performance optimization, and deployment support.',
+    'Collaborated with clients to gather requirements and deliver solutions tailored to business needs.',
+    'Provided technical documentation and user guides to ensure smooth system adoption.'
+  ],
+  technologies: [
+    'Laravel',
+    'Flask',
+    'Django',
+    'React',
+    'Express.js',
+    'MySQL',
+    'PostgreSQL',
+    'Docker',
+    'Git'
+  ]
+},
+{
+  position: 'Web Developer (Independent Study Program)',
   company: 'Educourse.id',
   location: 'Remote',
-  period: '2024',
-  type: 'Program Studi Independen',
-  description: 'Mengikuti program pengembangan web dan platform pendidikan melalui pembelajaran intensif dan project berbasis tim.',
+  period: 'September 2024 – December 2024',
+  type: 'Independent Study',
+  description:
+    'Completed an intensive full-stack web development program focused on building education technology platforms through collaborative team projects.',
   responsibilities: [
-    'Mengembangkan platform pembelajaran berbasis web menggunakan JavaScript, Bootstrap, dan Django',
-    'Membangun fitur frontend dan backend sesuai kebutuhan sistem',
-    'Berkolaborasi dalam tim untuk mengembangkan project “RPLearn”',
-    'Melakukan testing, debugging, dan perbaikan sistem secara berkala',
-    'Menerapkan konsep software development lifecycle dalam project',
-    'Mendokumentasikan proses dan hasil pengembangan aplikasi',
+    'Designed and developed the RPLearn learning management platform using JavaScript, Bootstrap, and Django.',
+    'Implemented frontend interfaces and backend functionalities based on system requirements.',
+    'Collaborated within an agile development team throughout planning, implementation, testing, and deployment.',
+    'Performed application testing, debugging, and continuous feature improvements.',
+    'Applied Software Development Life Cycle (SDLC) principles throughout the development process.',
+    'Produced technical documentation to support system maintenance and future enhancements.'
   ],
-  technologies: ['JavaScript', 'Bootstrap', 'Django', 'HTML', 'CSS', 'MySQL', 'Git']
+  technologies: [
+    'JavaScript',
+    'Bootstrap',
+    'Django',
+    'HTML',
+    'CSS',
+    'MySQL',
+    'Git'
+  ]
 },
 {
   position: 'Human Capital Technology & Information Intern',
