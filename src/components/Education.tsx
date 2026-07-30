@@ -1,37 +1,12 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { GraduationCap, Calendar, MapPin } from 'lucide-react';
-
-const Education: React.FC = () => {
+import { type EducationProps } from '../data/education';
+const Education: React.FC<EducationProps> = ({educations}) => {
   const { elementRef, isIntersecting } = useIntersectionObserver({ 
     threshold: 0.2,
     freezeOnceVisible: true 
   });
-
-  const educations = [
-    {
-      degree: 'Sarjana Teknik Informatika',
-      institution: 'Universitas Budi Luhur',
-      location: 'Jakarta, Indonesia',
-      period: 'July 2022 - January 2026',
-      description: 'Berfokus pada pengembangan Full Stack dan AI Enthusiast. Menyelesaikan skripsi tentang pengembangan chatbot menggunakan metode Multinomial Naive Bayes dan K-Nearest Neighbors.',
-      achievements: [
-        'GPA: 3.96 / 4.0',
-        'Magna Cum Laude',
-        'Publikasi Jurnal Nasional',
-      ]
-    },
-    {
-      degree: 'Studi Independen Web Developer and Platform (Specialist Education Platform) ',
-      institution: 'Educourse.id',
-      location: 'Jakarta, Indonesia',
-      period: 'September 2024 - December 2024',
-      description: 'Mengikuti program Studi Independen Web Developer dan Platform Pendidikan yang diselenggarakan oleh PT Maleo Edukasi Teknologi, dengan fokus pada pengembangan web front-end menggunakan JavaScript dan Bootstrap serta back-end menggunakan Django. Berkolaborasi dalam tim untuk mengembangkan platform pembelajaran berbasis web bernama RPLearn, sekaligus meningkatkan pemahaman tentang pemanfaatan teknologi dalam dunia pendidikan.',
-      achievements: [
-        'Capstone Project: RPLearn',
-      ]
-    },
-  ];
 
   return (
     <section 
@@ -58,13 +33,13 @@ const Education: React.FC = () => {
             <h2 className="text-4xl lg:text-5xl font-bold text-zinc-100 mt-4 mb-6">
               Academic Journey
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto rounded-full" />
+            <div className="w-20 h-1 bg-white mx-auto rounded-full" />
           </div>
 
           
           <div className="relative">
             
-            <div className="absolute left-0 lg:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-emerald-500 via-cyan-500 to-purple-500 transform lg:-translate-x-1/2" />
+            <div className="absolute left-0 lg:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-green-200 via-green-400 to-green-600 transform lg:-translate-x-1/2" />
 
             
             <div className="space-y-16">

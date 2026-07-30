@@ -1,72 +1,18 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
-
-const Experience: React.FC = () => {
+import {type ExperienceProps} from '../data/experiences'
+const Experience: React.FC<ExperienceProps> = ({experiences}) => {
   const { elementRef, isIntersecting } = useIntersectionObserver({ 
     threshold: 0.1,
     freezeOnceVisible: true 
   });
 
-  const experiences = [
-    {
-      position: 'Part-time Teacher Coding and Robotics',
-      company: 'Codero Education',
-      location: 'Bintaro, Indonesia',
-      period: '2025 - Present',
-      type: 'Part-time',
-     description: 'Mengajar coding dan robotik kepada siswa tingkat SD, SMP, dan SMA dengan metode pembelajaran interaktif dan berbasis proyek.',
-      responsibilities: [
-        'Mengajar konsep dasar hingga menengah pemrograman kepada siswa SD, SMP, dan SMA',
-        'Mengenalkan computational thinking melalui pemrograman visual menggunakan Scratch dan PictoBlox',
-        'Membimbing siswa dalam pengembangan game dan simulasi menggunakan Roblox Studio',
-        'Mengajarkan dasar elektronika dan pemrograman mikrokontroler menggunakan Arduino',
-        'Melatih robotika menggunakan platform Ukit dan Astrobot, termasuk perakitan dan troubleshooting',
-        'Mengajarkan dasar web development menggunakan HTML, CSS, dan JavaScript',
-        'Mengajarkan dasar pemrograman Python untuk siswa SMP dan SMA',
-        'Membimbing siswa dalam pembuatan mini project berbasis coding dan robotik',
-        'Menyusun materi pembelajaran dan modul praktikum sesuai kurikulum internal',
-        'Mengembangkan kemampuan problem solving, logika berpikir, dan kreativitas siswa melalui project-based learning',
-      ],
-      technologies: ['Python', 'MySQL', 'Scratch', 'HTML/CSS', 'Arduino', 'Roblox Studio', 'PictoBlox']
-    },
-        {
-      position: 'Freelance Web Developer',
-      company: 'Self-Employed',
-      location: 'Remote',
-      period: '2024 - Sekarang',
-      type: 'Freelance',
-      description: 'Menyediakan jasa pembuatan website dan pengembangan sistem berbasis web untuk individu, UMKM, dan mahasiswa.',
-      responsibilities: [
-        'Mengerjakan pembuatan website sesuai kebutuhan klien, mulai dari company profile hingga sistem berbasis web',
-        'Membantu pengembangan dan penyempurnaan project mahasiswa, termasuk tugas akhir dan skripsi',
-        'Mengembangkan fitur backend dan frontend menggunakan framework modern',
-        'Melakukan integrasi database dan pengelolaan data menggunakan MySQL dan PostgreSQL',
-        'Melakukan testing, debugging, dan optimasi performa aplikasi',
-        'Memberikan dokumentasi serta panduan penggunaan sistem kepada klien',
-        'Menyesuaikan desain dan fitur website berdasarkan feedback pengguna',
-      ],
-      technologies: ['Laravel', 'Flask', 'Django', 'React', 'Express', 'MySQL', 'PostgreSQL', 'Docker', 'Git']
-    },
-    {
-  position: 'Web Developer (Studi Independen)',
-  company: 'Educourse.id',
-  location: 'Remote',
-  period: '2024',
-  type: 'Program Studi Independen',
-  description: 'Mengikuti program pengembangan web dan platform pendidikan melalui pembelajaran intensif dan project berbasis tim.',
-  responsibilities: [
-    'Mengembangkan platform pembelajaran berbasis web menggunakan JavaScript, Bootstrap, dan Django',
-    'Membangun fitur frontend dan backend sesuai kebutuhan sistem',
-    'Berkolaborasi dalam tim untuk mengembangkan project “RPLearn”',
-    'Melakukan testing, debugging, dan perbaikan sistem secara berkala',
-    'Menerapkan konsep software development lifecycle dalam project',
-    'Mendokumentasikan proses dan hasil pengembangan aplikasi',
-  ],
-  technologies: ['JavaScript', 'Bootstrap', 'Django', 'HTML', 'CSS', 'MySQL', 'Git']
-}
+ const sortedExperiences = [...experiences].sort((a, b) => {
+  const getYear = (period: string) => parseInt(period.match(/\d{4}/)?.[0] || "0");
 
-  ];
+  return getYear(b.period) - getYear(a.period);
+});
 
   return (
     <section 
@@ -94,12 +40,12 @@ const Experience: React.FC = () => {
             <h2 className="text-4xl lg:text-5xl font-bold text-zinc-100 mt-4 mb-6">
               Professional Journey
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto rounded-full" />
+            <div className="w-20 h-1 bg-white mx-auto rounded-full" />
           </div>
 
          
           <div className="space-y-8">
-            {experiences.map((exp, index) => (
+            {sortedExperiences.map((exp, index) => (
               <div
                 key={index}
                 className={`transition-all duration-1000 ${

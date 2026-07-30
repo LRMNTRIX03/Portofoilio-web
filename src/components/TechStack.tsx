@@ -1,59 +1,17 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
-import {
-  SiReact,
-  SiTypescript,
-  SiTailwindcss,
-  SiExpress,
-  SiMysql,
-  SiFlask,
-  SiLaravel,
-  SiDjango,
-  SiDocker,
-  SiGit,
-  SiJavascript,
-  SiCss3
-} from 'react-icons/si';
+import type { TechProps } from '../data/Tech';
 
-const TechStack: React.FC = () => {
+const TechStack: React.FC<TechProps> = ({tech}) => {
+
+
   const { elementRef, isIntersecting } = useIntersectionObserver({
     threshold: 0.2,
     freezeOnceVisible: true
   });
 
-  const techCategories = [
-    {
-      category: 'Frontend',
-      color: 'emerald',
-      technologies: [
-        { name: 'React', icon: SiReact },
-        { name: 'JavaScript', icon: SiJavascript },
-        { name: 'TypeScript', icon: SiTypescript },
-        { name: 'Tailwind CSS', icon: SiTailwindcss },
-        { name: 'CSS', icon: SiCss3 },
-      ]
-    },
-    {
-      category: 'Backend',
-      color: 'cyan',
-      technologies: [
-        { name: 'Express', icon: SiExpress },
-        { name: 'MySQL', icon: SiMysql },
-        { name: 'Flask', icon: SiFlask },
-        { name: 'Laravel', icon: SiLaravel },
-        { name: 'Django', icon: SiDjango },
-      ]
-    },
-    {
-      category: 'DevOps & Tools',
-      color: 'purple',
-      technologies: [
-        { name: 'Docker', icon: SiDocker },
-        { name: 'Git', icon: SiGit },
-      ]
-    },
-  ];
+  
 
   const getColorClasses = (color: string) => {
     const colors: Record<string, { badge: string; hover: string }> = {
@@ -93,12 +51,12 @@ const TechStack: React.FC = () => {
               Technologies I Work With
             </h2>
 
-            <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto rounded-full" />
+            <div className="w-20 h-1 bg-white mx-auto rounded-full" />
           </div>
 
        
           <div className="grid lg:grid-cols-3 gap-8">
-            {techCategories.map((category, categoryIndex) => {
+            {tech.map((category, categoryIndex) => {
               const color = getColorClasses(category.color);
 
               return (
@@ -146,8 +104,7 @@ const TechStack: React.FC = () => {
             isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
             <p className="text-zinc-400 text-lg">
-              Saya terus belajar dan mengeksplorasi teknologi baru untuk meningkatkan kemampuan
-              saya dalam membangun aplikasi modern, efisien, dan scalable.
+             Passionate about continuous learning, I constantly explore new technologies to build modern, scalable, and high-quality software.
             </p>
           </div>
 

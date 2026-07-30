@@ -47,7 +47,7 @@ const FloatingNavbar: React.FC = () => {
     { id: 'tech', label: 'Tech' },
     { id: 'education', label: 'Education' },
     { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
+    { id: 'projects', label: 'Projects' }
   ];
 
   return (

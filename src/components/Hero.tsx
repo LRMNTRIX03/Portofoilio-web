@@ -1,10 +1,15 @@
 import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
-import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react';
+import { Download, ArrowRight } from 'lucide-react';
 import pp_keren from '../assets/img/pp_keren.jpeg';
+import {type HeroData} from '../data/hero'
 import cv from '../assets/cv/CV_Lutfi_Rizaldi_Mahida - Final.pdf';
 
-const Hero: React.FC = () => {
+export interface HeroProps {
+  hero: HeroData[];
+}
+
+const Hero: React.FC<HeroProps> = ({hero}) => {
   const { elementRef, isIntersecting } = useIntersectionObserver({ 
     threshold: 0.1,
     freezeOnceVisible: true 
@@ -48,22 +53,24 @@ const Hero: React.FC = () => {
           >
 
            
-            <div className="space-y-4">
+            <div className="space-y-4 mt-[10vh]">
               <h1 className="text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="text-zinc-100">Hi, I'm</span>
                 <br />
-                <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+                <span className="bg-gradient-to-r from-green-200 via-green-400 to-green-600 font-bold bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
                   Lutfi Rizaldi Mahida
                 </span>
               </h1>
               
-              <p className="text-2xl lg:text-3xl text-white font-bold  ">
-                Full Stack Developer | AI Enthusiast  
+            
+              <p className="text-2xl lg:text-3xl text-gray-300 font-bold">
+                {hero[0]?.roles.join(' | ')}
               </p>
+               
             </div>
 
-            <p className="text-lg text-zinc-400 leading-relaxed max-w-xl text-justify">
-             Lulusan Teknik Informatika dengan IPK 3,96 yang berfokus pada pengembangan Backend dan Full-Stack Web. Memiliki pengalaman membangun aplikasi berbasis Laravel dan Django, termasuk sistem prediksi berbasis ANN serta sistem berbasis rule. Terbiasa mengembangkan REST API, sistem autentikasi, dan perancangan database relasional. Memiliki kemampuan analisis, problem solving, serta komunikasi dan kerja tim yang baik.
+            <p className="text-lg text-zinc-400 font-bold leading-relaxed max-w-xl text-justify">
+              {hero[0]?.deskripsi}
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -79,18 +86,14 @@ const Hero: React.FC = () => {
                 onClick={() => window.open(`${cv}`, '_blank')}
                 className="px-8 py-4 bg-zinc-800 hover:bg-zinc-700 text-zinc-100 rounded-xl font-medium transition-all duration-300 flex items-center gap-2 border border-zinc-700 hover:border-zinc-600 hover:-translate-y-0.5"
               >
-                Download CV
+                View CV
                 <Download className="w-5 h-5" />
               </button>
             </div>
 
           
             <div className="flex gap-4 pt-4">
-              {[
-                { Icon: Github, href: 'https://github.com/LRMNTRIX03', label: 'GitHub' },
-                { Icon: Linkedin, href: 'https://linkedin.com/in/lutfi-rizaldi-mahida-65a566300/', label: 'LinkedIn' },
-                { Icon: Mail, href: 'mailto:rizaldilutfi1@gmail.com', label: 'Email' },
-              ].map(({ Icon, href, label }) => (
+              {hero[0]?.profile.map(({ Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
@@ -136,10 +139,6 @@ const Hero: React.FC = () => {
         </div>
 
       
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-sm text-zinc-500 font-medium">Scroll to explore</span>
-          <div className="w-[2px] h-16 bg-gradient-to-b from-emerald-500/50 to-transparent" />
-        </div>
       </div>
     </section>
   );
