@@ -71,35 +71,36 @@
   technologies: ['JavaScript', 'Bootstrap', 'Django', 'HTML', 'CSS', 'MySQL', 'Git']
 },
 {
-  position: 'Software Engineer (Human Capital Technology & Information)',
-  company: 'Bank Syariah Indonesia (BSI)',
+  position: 'Human Capital Technology & Information Intern',
+  company: 'Bank Syariah Indonesia (BIBIT Internship Program)',
   location: 'Jakarta, Indonesia',
   period: 'Apr 2026 – Present',
-  type: 'Contract',
+  type: 'Internship',
   description:
-    'Developing and maintaining enterprise Human Capital applications that support HR operations and digital transformation initiatives within Bank Syariah Indonesia.',
+    'Contributing to the development and maintenance of enterprise Human Capital Information Systems supporting more than 30,690 users across Bank Syariah Indonesia through application development, database optimization, and business process automation.',
   responsibilities: [
-    'Developed and maintained enterprise Human Capital applications, including SIKAD and SIPP.',
-    'Built frontend features using Next.js and React while developing backend services with Spring Boot and Laravel.',
-    'Designed and optimized Oracle Database schemas, SQL queries, and stored procedures.',
-    'Developed RESTful APIs and implemented authentication and authorization mechanisms.',
-    'Built Microsoft Teams automation to streamline HR workflows and internal notifications.',
-    'Collaborated with business users, QA engineers, and cross-functional teams to deliver scalable enterprise solutions.',
-    'Performed debugging, testing, deployment support, and technical documentation.'
+    'Contributed to the development and maintenance of SIKAD (Sistem Informasi Kriya & Alih Daya), an enterprise Human Capital Information System serving 30,690+ users.',
+    'Developed and enhanced HR modules using PHP Native, JavaScript, jQuery, HTML, CSS, and MySQL, supporting Business Trip, Payroll, Attendance, Leave, Overtime, Registration, Dashboards, and Reporting.',
+    'Built HR operational features for over 11,500 outsourced employees (TAD, BIBIT, and Kriya), including Manpower Planning, Overtime Extra, employee management, and reporting.',
+    'Designed and optimized MySQL database objects, including tables, indexes, stored procedures, scheduled events, and SQL queries to improve system performance and data integrity.',
+    'Developed a Python-based Microsoft Teams Automation Bot for HC Connect, automating personalized HR notifications and reducing manual communication efforts.',
+    'Contributed to the development of SIPP (Sistem Informasi Pendaftaran dan Penghargaan) using Spring Boot, Next.js, and Oracle Database by developing backend APIs, frontend modules, and database integration.',
+    'Built internal productivity tools, including a Python-based PDF Compressor and Python + Pandas utilities for HR data processing, validation, cleansing, and migration.'
   ],
   technologies: [
-    'Next.js',
-    'React',
-    'Spring Boot',
-    'Java',
-    'Laravel',
     'PHP',
-    'Oracle Database',
-    'SQL',
+    'Java',
+    'Spring Boot',
+    'Next.js',
     'TypeScript',
     'JavaScript',
-    'Docker',
-    'Git'
+    'jQuery',
+    'Python',
+    'Pandas',
+    'MySQL',
+    'Oracle Database',
+    'HTML',
+    'CSS'
   ]
 }
 
