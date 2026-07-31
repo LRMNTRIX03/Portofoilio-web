@@ -26,6 +26,10 @@ const TechStack: React.FC<TechProps> = ({tech}) => {
       purple: {
         badge: 'bg-purple-500/10 border-purple-500/30 text-purple-400',
         hover: 'group-hover:text-purple-400'
+      },
+      blue : {
+        badge: 'bg-blue-500/10 border-blue-500/30 text-blue-400',
+        hover: 'group-hover:text-blue-400'
       }
     };
     return colors[color];
