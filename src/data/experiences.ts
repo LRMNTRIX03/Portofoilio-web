@@ -18,7 +18,7 @@
   position: 'Coding & Robotics Teacher (Part-time)',
   company: 'Codero Education',
   location: 'Bintaro, Indonesia',
-  period: 'December 2025 – Present',
+  period: 'December 2025 – July 2026',
   type: 'Part-time',
   description:
     'Deliver interactive coding and robotics education to elementary, junior high, and senior high school students through project-based learning.',
